@@ -1,36 +1,28 @@
 import { FaBasketShopping } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
-    <div className="flex flex-col justify-between items-center pl-10 pr-10 self-center h-30 border-4 md:flex-row">
-        <Link to="/">
-         <div className="font-bold text-lg">ECLIPSE</div>
-        </Link>
-      <div className="flex gap-4">
-        <Link to="/womens">
-          <p>Women's</p>
-        </Link>
+    <div className="flex flex-col justify-between items-center pl-10 pr-10 self-center h-36 border-4 md:flex-row ">
+      <NavLink to="/">
+        <div className="font-bold text-lg">ECLIPSE</div>
+      </NavLink>
+      <div className="flex gap-4 md:gap-8">
+        <NavLink to="/womens">Women's</NavLink>
 
-        <Link to="/mens">
-          <p>Men's</p>
-        </Link>
+        <NavLink to="/mens">Men's</NavLink>
 
-        <Link to="/jewelery">
-          <p>Jewelery</p>
-        </Link>
+        <NavLink to="/jewelery">Jewelery</NavLink>
 
-        <Link to="/electronics">
-          <p>Electronics</p>
-        </Link>
+        <NavLink to="/electronics">Electronics</NavLink>
       </div>
 
-      <Link to="/checkout">
+      <NavLink to="/checkout">
         <div className="mt-4 md:mt-0">
           <FaBasketShopping size="32" />
         </div>
-      </Link>
+      </NavLink>
     </div>
   );
 }
-
 export default Navbar;
