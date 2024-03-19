@@ -12,6 +12,7 @@ export interface Product {
   description: string,
   image: string,
   rating: {rate: number, count: number}
+  quantity?: number | undefined
 }
 
 export const fetchProducts = (category_name: string) => {

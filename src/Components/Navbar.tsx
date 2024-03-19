@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { FaBasketShopping } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { BasketContext } from "../Contexts/BasketContext";
 
 function Navbar() {
+
+  const {basketItems} = useContext(BasketContext)
   return (
     <div className="flex flex-col justify-between items-center pl-10 pr-10 self-center h-36 md:flex-row ">
       <NavLink to="/">
@@ -19,6 +23,7 @@ function Navbar() {
 
       <NavLink to="/checkout">
         <div className="mt-4 md:mt-0">
+          <p>{basketItems.length}</p>
           <FaBasketShopping size="32" />
         </div>
       </NavLink>
