@@ -2,7 +2,6 @@ import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { fetchProducts } from "../../utils/api";
 import ProductCard from "../Components/ProductCard";
-import { TailSpin } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import { Product } from "../../utils/api";
 
@@ -34,26 +33,15 @@ function SingleCategoryItems() {
 
   return loading ? (
     <div className="flex justify-center items-center">
-      <TailSpin
-        visible={true}
-        height="140"
-        width="140"
-        color="#7e22ce"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-        wrapperStyle={{}}
-        wrapperClass=""
-      />
+      <p>Loading...</p>
     </div>
   ) : (
     <div className="">
       <div className="flex justify-center items-center h-24 bg-purple-800 text-white text-2xl font-bold md:text-3xl md:h-36">
         All the latest products you need!
       </div>
-      <div className="flex justify-evenly">
-        <div>Sort</div>
-      </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 m-20 lg:grid-cols-3">
+
+      <div className="grid grid-cols-1 md: grid-cols-2">
         {products.map((product) => (
           <Link to={`/product/${product.id}`}>
             <ProductCard product={product} key={product.id} />

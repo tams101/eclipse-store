@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { Product, fetchSingleProduct } from "../../utils/api"
+import { BasketContext } from "../Contexts/BasketContext"
 
 function SingleItem() {
   const {product_id} = useParams()
@@ -17,6 +18,8 @@ function SingleItem() {
     })
   }, [product_id])
 
+  const {addToBasket} = useContext(BasketContext)
+
   return ( loading ? <p>Loading...</p> : 
   <div className="flex flex-col items-center p-4 md:flex-row">
       <div className="mb-6">
@@ -27,6 +30,10 @@ function SingleItem() {
         <p className="font-bold text-lg">{product?.title}</p>
         <p>Description: {product?.description}</p>
         <p className="font-bold">£{product?.price}</p>
+        
+
+        
+        <button onClick={() => {addToBasket(product)}} className="btn bg-slate-500 w-20">Add to basket</button>
       </div>
     </div>
   )

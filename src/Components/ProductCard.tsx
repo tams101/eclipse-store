@@ -2,7 +2,7 @@ import { Product } from "../../utils/api"
 
 function ProductCard({product} : {product : Product}) {
   return (
-    <div className="text-center rounded shadow-sm m-3">
+    <div className="text-center rounded shadow-sm m-3 h-full p-2">
       <img className="w-24 object-contain mx-auto" src={product.image} alt={`Image of ${product.title}`} />
       <div className="px-6 py-4">
         <p className="font-bold text-md mb-2">{product.title}</p>
