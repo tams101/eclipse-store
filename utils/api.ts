@@ -14,9 +14,16 @@ export interface Product {
   rating: {rate: number, count: number}
 }
 
-export const fetchProducts = () => {
-  return api.get('/products')
+export const fetchProducts = (category_name: string) => {
+  return api.get(`/products/category/${category_name}`)
     .then(({data} : {data: Product[]}) => {
+      return data
+    })
+}
+
+export const fetchSingleProduct = (product_id: string) => {
+  return api.get(`/products/${product_id}`)
+    .then(({data} : {data:Product}) => {
       return data
     })
 }
