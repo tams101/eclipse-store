@@ -2,8 +2,10 @@ import { Product } from "../../utils/api"
 
 function ProductCard({product} : {product : Product}) {
   return (
-    <div className="text-center rounded shadow-sm m-3 h-full p-2">
-      <img className="w-24 object-contain mx-auto" src={product.image} alt={`Image of ${product.title}`} />
+    <div className="flex flex-wrap items-center rounded shadow-sm m-3 h-full p-2 md:flex-nowrap">
+      <div>
+        <img className="w-24 object-contain mx-auto md:w-36" src={product.image} alt={`Image of ${product.title}`} />
+      </div>
       <div className="px-6 py-4">
         <p className="font-bold text-md mb-2">{product.title}</p>
         <p>£{product.price}</p>
