@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import SingleCategoryItems from './Pages/SingleCategoryItems'
 import SingleItem from './Pages/SingleItem'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route path="/product/:product_id" element={<SingleItem/>}/>
           <Route path='/checkout' element={<Checkout />}/>
         </Routes>
-
+      <Footer />
     </>
   )
 }

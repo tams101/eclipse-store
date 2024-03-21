@@ -37,14 +37,14 @@ function SingleCategoryItems() {
     </div>
   ) : (
     <div className="">
-      <div className="flex justify-center items-center h-24 bg-purple-800 text-white text-2xl font-bold md:text-3xl md:h-36">
-        All the latest products you need!
+      <div className="flex justify-center items-center text-white bg-gradient-to-r from-gray-400 to-gray-300 h-24 text-2xl font-bold md:text-3xl md:h-36">
+        {category_name?.toUpperCase()}
       </div>
 
-      <div className="grid grid-cols-1 md: grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 p-10">
         {products.map((product) => (
-          <Link to={`/product/${product.id}`}>
-            <ProductCard product={product} key={product.id} />
+          <Link to={`/product/${product.id}`} key={product.id}>
+            <ProductCard product={product}  />
           </Link>
           
         ))}

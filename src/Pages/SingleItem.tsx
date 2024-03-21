@@ -21,13 +21,14 @@ function SingleItem() {
   const {addToBasket} = useContext(BasketContext)
 
   return ( loading ? <p>Loading...</p> : 
-  <div className="flex flex-col items-center p-4 md:flex-row">
+  <div className="flex flex-col items-center p-4 mt-4 md:flex-row md:justify-between">
       <div className="mb-6">
         <img className="w-36 md:w-96" src={product?.image} alt={`Image of ${product?.title}`} />
       </div>
       
       <div className="flex flex-col justify-center gap-10">
         <p className="font-bold text-lg">{product?.title}</p>
+        <p>Reviews {product?.rating.rate} / 5 ({product?.rating.count})</p>
         <p>Description: {product?.description}</p>
         <p className="font-bold">£{product?.price}</p>
         
