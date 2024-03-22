@@ -14,7 +14,7 @@ function Checkout() {
   return (
     <div className="bg-sky-50 h-svh">
       <div className="flex justify-between p-4 bg-sky-100">
-        <p className="text-xl font-bold md:text-2xl lg:text-4xl">Checkout <span className="text-lg font-normal"> {basketItems.length} item{basketItems.length === 1 ? '' : 's'}</span></p>
+        <p className="text-xl font-bold md:text-2xl lg:text-3xl">Checkout <span className="text-lg font-normal"> {basketItems.length} item{basketItems.length === 1 ? '' : 's'}</span></p>
         <button
           className="bg-slate-700 p-2 rounded-lg text-white"
           onClick={clearBasket}
@@ -27,7 +27,7 @@ function Checkout() {
         {basketItems.length > 0 ? (
           <div>
             {basketItems.map((item: Product) => (
-              <CheckoutItem item={item}/>
+              <CheckoutItem key={item.id} item={item}/>
             ))}
           </div>
         ) : (
