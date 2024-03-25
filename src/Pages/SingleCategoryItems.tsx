@@ -39,7 +39,7 @@ function SingleCategoryItems() {
       <p className="text-2xl font-bold">Loading...</p>
     </div>
   ) : (
-    <div className="">
+    <div>
       <div className="flex justify-center items-center text-white bg-gradient-to-r from-sky-500 to-sky-400 h-24 text-2xl font-bold md:text-3xl md:h-36">
         {category_name?.toUpperCase()}
       </div>

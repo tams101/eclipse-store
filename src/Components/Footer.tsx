@@ -5,7 +5,7 @@ function Footer() {
     <footer className="bg-gray-100 grid p-5 lg:p-16 lg:grid-cols-3">
       <div className="my-2 mr-2">
         <p className="font-bold my-2">Eclipse</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae atque doloribus tempora impedit qui. Animi temporibus tempora error quisquam nam nostrum praesentium modi maxime mollitia provident reiciendis vitae.</p>
+        <p>Established 2024</p>
       </div>
       <div className="md:m-2">
         <p className="my-2 font-bold">Links</p>

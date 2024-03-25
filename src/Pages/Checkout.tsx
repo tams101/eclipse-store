@@ -6,7 +6,7 @@ import {Mastercard, Visa, Paypal, Amex} from 'react-payment-logos/dist/flat'
 import { Link } from "react-router-dom";
 
 function Checkout() {
-  const { basketItems, clearBasket, removeFromBasket, getBasketTotal } =
+  const { basketItems, clearBasket, getBasketTotal } =
     useContext(BasketContext);
 
   let basketTotal = getBasketTotal().toFixed(2);
@@ -25,11 +25,11 @@ function Checkout() {
 
       <div className="grid md:px-10 md:grid-cols-2">
         {basketItems.length > 0 ? (
-          <div>
+          <article>
             {basketItems.map((item: Product) => (
               <CheckoutItem key={item.id} item={item}/>
             ))}
-          </div>
+          </article>
         ) : (
           <p className="text-xl md:text-2xl lg:text-4xl text-center">No items in basket</p>
         )}
