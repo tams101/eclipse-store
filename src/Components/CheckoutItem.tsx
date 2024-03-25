@@ -1,4 +1,3 @@
-import { Product } from "../../utils/api";
 import { BasketContext } from "../Contexts/BasketContext";
 import { useContext } from "react";
 
