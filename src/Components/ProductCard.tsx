@@ -2,7 +2,7 @@ import { Product } from "../../utils/api"
 
 function ProductCard({product} : {product : Product}) {
   return (
-    <div className="flex flex-wrap items-center rounded shadow-sm m-3 h-full p-2 md:flex-nowrap">
+    <div className="flex flex-wrap items-center justify-center rounded shadow-sm m-3 h-full p-2 md:flex-nowrap">
       <div>
         <img className="w-24 object-contain mx-auto md:w-36" src={product.image} alt={`Image of ${product.title}`} />
       </div>
