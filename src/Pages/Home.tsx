@@ -15,7 +15,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 gap-5 p-8 place-items-center md:grid-cols-2 lg:grid-cols-4">
+      <section className="grid grid-cols-1 gap-5 p-8 place-items-center md:grid-cols-2 lg:grid-cols-4">
         <Link to="/womens">
           <div className="relative hover:-translate-y-1 hover:scale-105 duration-300">
             <img className="w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] object-cover opacity-90" src="../../images/womens.jpg" alt="" />
@@ -52,7 +52,7 @@ function Home() {
           </div>
         </Link>
 
-      </div>
+      </section>
 
       
     </>

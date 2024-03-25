@@ -2,12 +2,12 @@ import { SocialIcon } from "react-social-icons"
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 grid p-10 lg:p-20 lg:grid-cols-3">
-      <div className="my-2">
+    <footer className="bg-gray-100 grid p-5 lg:p-16 lg:grid-cols-3">
+      <div className="my-2 mr-2">
         <p className="font-bold my-2">Eclipse</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae atque doloribus tempora impedit qui. Animi temporibus tempora error quisquam nam nostrum praesentium modi maxime mollitia provident reiciendis vitae.</p>
       </div>
-      <div className="m-2">
+      <div className="md:m-2">
         <p className="my-2 font-bold">Links</p>
         <ul className="flex flex-col md:space-x-2 md:flex-row">
           <li>Home</li>
@@ -23,11 +23,11 @@ function Footer() {
         </div>
         
       </div>
-      <div className="p-2">
+      <div className="my-2">
         <p className="font-bold my-2">Contact</p>
-        <p>123 Retail Street, Manchester, M1 9LX</p>
+        <p>123 Retail Street, Manchester, M1 9XX</p>
         <p>0161 123 123</p>
-        <p>contact@eclipse.com</p>
+        <p>contact@example.com</p>
       </div>
     </footer>
   )

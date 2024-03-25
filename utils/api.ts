@@ -12,7 +12,7 @@ export interface Product {
   description: string,
   image: string,
   rating: {rate: number, count: number}
-  quantity?: number | undefined
+  quantity?: number
 }
 
 export const fetchProducts = (category_name: string) => {
@@ -22,7 +22,7 @@ export const fetchProducts = (category_name: string) => {
     })
 }
 
-export const fetchSingleProduct = (product_id: string) => {
+export const fetchSingleProduct = (product_id: string | undefined) => {
   return api.get(`/products/${product_id}`)
     .then(({data} : {data:Product}) => {
       return data

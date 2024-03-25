@@ -8,7 +8,7 @@ type BasketProviderProps = {
 export const BasketContext = createContext({});
 
 export const BasketProvider = ({children} : BasketProviderProps) => {
-  const [basketItems, setBasketItems] = useState(localStorage.getItem('basketItems') ? JSON.parse(localStorage.getItem('basketItems')) : [])
+  const [basketItems, setBasketItems] = useState(localStorage.getItem('basketItems') ? JSON.parse(localStorage.getItem('basketItems') || "''") : [])
 
   useEffect(() => {
     localStorage.setItem("basketItems", JSON.stringify(basketItems))
