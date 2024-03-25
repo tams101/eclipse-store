@@ -5,7 +5,7 @@ type BasketProviderProps = {
   children: ReactNode
 }
 
-export const BasketContext = createContext({});
+export const BasketContext = createContext<any>({});
 
 export const BasketProvider = ({children} : BasketProviderProps) => {
   const [basketItems, setBasketItems] = useState(localStorage.getItem('basketItems') ? JSON.parse(localStorage.getItem('basketItems') || "''") : [])

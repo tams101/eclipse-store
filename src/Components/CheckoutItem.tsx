@@ -1,7 +1,20 @@
+import { Product } from "../../utils/api";
 import { BasketContext } from "../Contexts/BasketContext";
 import { useContext } from "react";
 
-function CheckoutItem({item}) {
+type ItemProp = {
+  item: {id: number,
+  title: string,
+  price: number,
+  category: string,
+  description: string,
+  image: string,
+  rating: {rate: number, count: number}
+  quantity?: any
+  }
+}
+
+function CheckoutItem({item}: ItemProp) {
 
   const { removeFromBasket, addToBasket } =
     useContext(BasketContext);

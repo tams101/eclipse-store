@@ -12,7 +12,7 @@ export interface Product {
   description: string,
   image: string,
   rating: {rate: number, count: number}
-  quantity?: number
+  quantity?: any
 }
 
 export const fetchProducts = (category_name: string) => {
